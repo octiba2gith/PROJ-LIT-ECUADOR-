@@ -39,7 +39,7 @@
       };
     };
 
-   # Workspace lifecycle hooks
+    # Workspace lifecycle hooks
     workspace = {
       onCreate = {
         # Install dependencies automatically when the workspace is generated with backward compatibility
@@ -49,4 +49,5 @@
         # This runs every time the workspace starts
       };
     };
+  };
 }
