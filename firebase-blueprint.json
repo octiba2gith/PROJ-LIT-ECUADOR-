@@ -1,0 +1,115 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Usuario lsm registrado con correo y contraseña.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "Nombre completo" },
+        "email": { "type": "string", "description": "Correo único del lector" },
+        "password": { "type": "string", "description": "Contraseña de acceso" }
+      },
+      "required": ["name", "email", "password"]
+    },
+    "Book": {
+      "title": "Book",
+      "description": "Libro del catálogo general.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Identificador único" },
+        "title": { "type": "string", "description": "Título de la publicación o himno" },
+        "author": { "type": "string", "description": "Autor o compositor" },
+        "category": { "type": "string", "description": "Categoría (Libros, Himnos, etc.)" },
+        "description": { "type": "string", "description": "Sinopsis o detalles" },
+        "coverColor": { "type": "string", "description": "Clase de fondo Tailwind" },
+        "stock": { "type": "number", "description": "Cantidad física disponible" },
+        "initialStock": { "type": "number", "description": "Stock inicial de fábrica" },
+        "price": { "type": "number", "description": "Costo unitario en Dólares americanos" },
+        "visible": { "type": "boolean", "description": "Booleano de visibilidad en catálogo" },
+        "coverImage": { "type": "string", "description": "Imagen en miniatura Base64 o URL externa" },
+        "discountType": { "type": "string", "enum": ["percentage", "fixed", "none"] },
+        "discountValue": { "type": "number" }
+      },
+      "required": ["id", "title", "author", "category", "description", "coverColor", "stock", "initialStock", "price"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Solicitud de reserva de libros.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "orderDate": { "type": "string" },
+        "items": { "type": "array" },
+        "totalTitles": { "type": "number" },
+        "totalQuantity": { "type": "number" },
+        "totalPayable": { "type": "number" },
+        "userEmail": { "type": "string" }
+      },
+      "required": ["id", "firstName", "lastName", "orderDate", "items", "totalTitles", "totalQuantity", "totalPayable"]
+    },
+    "LayoutDesignConfig": {
+      "title": "LayoutDesignConfig",
+      "description": "Parámetros globales del diseño de la aplicación.",
+      "type": "object",
+      "properties": {
+        "headerTitle": { "type": "string" },
+        "headerSubtitle": { "type": "string" },
+        "heroTitle": { "type": "string" },
+        "heroSubtitle": { "type": "string" },
+        "colorPrimary": { "type": "string" },
+        "colorSecondary": { "type": "string" },
+        "colorBg": { "type": "string" },
+        "colorText": { "type": "string" },
+        "colorLightBg": { "type": "string" },
+        "colorBorder": { "type": "string" },
+        "colorLightBorder": { "type": "string" },
+        "colorAccentBorder": { "type": "string" },
+        "colorTerracotta": { "type": "string" },
+        "colorCardBg": { "type": "string" },
+        "fontSans": { "type": "string" },
+        "fontSerif": { "type": "string" },
+        "fontSizeBase": { "type": "string", "enum": ["small", "standard", "large"] },
+        "borderRadiusBase": { "type": "string", "enum": ["square", "soft", "medium", "large", "organic"] }
+      },
+      "required": ["headerTitle", "headerSubtitle", "heroTitle", "heroSubtitle", "colorPrimary", "colorSecondary", "colorBg", "colorText", "colorLightBg", "colorBorder", "colorLightBorder", "colorAccentBorder", "colorTerracotta", "colorCardBg", "fontSans", "fontSerif", "fontSizeBase", "borderRadiusBase"]
+    },
+    "StockNotification": {
+      "title": "StockNotification",
+      "description": "Alerta de stock insuficiente o reposición.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "bookId": { "type": "string" },
+        "bookTitle": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "type": { "type": "string", "enum": ["depleted", "restocked", "low_stock"] },
+        "read": { "type": "boolean" }
+      },
+      "required": ["id", "bookId", "bookTitle", "timestamp", "type", "read"]
+    }
+  },
+  "firestore": {
+    "users": {
+      "schema": "User",
+      "description": "Colección de usuarios clientes con acceso a realizar pedidos persistidos."
+    },
+    "books": {
+      "schema": "Book",
+      "description": "Catálogo global unificado del Servicio de Literatura de Ecuador."
+    },
+    "orders": {
+      "schema": "Order",
+      "description": "Pedidos y reservas recibidas en tiempo real de los lectores."
+    },
+    "configs": {
+      "schema": "LayoutDesignConfig",
+      "description": "Colección simple para almacenar parámetros de marca dinámica."
+    },
+    "notifications": {
+      "schema": "StockNotification",
+      "description": "Alertas de inventario."
+    }
+  }
+}

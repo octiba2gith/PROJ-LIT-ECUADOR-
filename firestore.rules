@@ -1,0 +1,35 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Global default-deny safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Catálogo de Libros - Lectura y escritura pública para posibilitar edición y manejo en vivo
+    match /books/{bookId} {
+      allow read, write: if true;
+    }
+
+    // Pedidos de Compra - Permite registrar y listar los pedidos recibidos en tiempo real
+    match /orders/{orderId} {
+      allow read, write: if true;
+    }
+
+    // Preferencias de Diseño e Identidad Visual (Configs) - Edición en vivo del diseño de marca de la app
+    match /configs/{configId} {
+      allow read, write: if true;
+    }
+
+    // Usuarios del Sistema - Registrar y consultar login de lectores de forma ágil y sincrónica
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+
+    // Alertas de Stock y Notificaciones de Inventario - Lectura y actualización pública
+    match /notifications/{notifId} {
+      allow read, write: if true;
+    }
+  }
+}

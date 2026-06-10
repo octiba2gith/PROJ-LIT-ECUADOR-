@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss/index.css";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Libre Baskerville", Georgia, serif;
+
+  --color-natural-bg: #FDFCF8;
+  --color-natural-text: #3D3D33;
+  --color-natural-primary: #5F6F52;
+  --color-natural-secondary: #8C8979;
+  --color-natural-border: #E6E2D3;
+  --color-natural-light-border: #EEEADD;
+  --color-natural-accent-border: #DEDAC5;
+  --color-natural-light-bg: #F4F1E8;
+  --color-natural-terracotta: #A67B5B;
+  --color-natural-alert-bg: #FFE5E5;
+  --color-natural-alert-text: #CC5555;
+  --color-natural-footer-bg: #F2EFE6;
+}
+
+body {
+  background-color: var(--color-natural-bg);
+  color: var(--color-natural-text);
+  font-family: var(--font-sans);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* --- Focus Mode custom overrides --- */
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  background-color: #6C7C5F !important;
+  padding-top: 0px !important;
+  margin-left: 0px !important;
+  margin-top: 0px !important;
+  margin-bottom: 5px !important;
+  @media (max-width: 639px) {
+    height: auto !important;
+    min-height: 54px !important;
+  }
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  padding-left: 22px !important;
+  padding-right: 22px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  font-family: Arial !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+
+  @media (max-width: 639px) {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    display: grid !important;
+    grid-template-areas: 
+      "profile . bell cart"
+      "search search search search" !important;
+    grid-template-columns: auto 1fr auto auto !important;
+    row-gap: 8px !important;
+    column-gap: 8px !important;
+    height: auto !important;
+    align-items: center !important;
+    padding-top: 6px !important;
+    padding-bottom: 8px !important;
+  }
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  @media (max-width: 639px) {
+    grid-area: profile !important;
+  }
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) {
+  @media (max-width: 639px) {
+    display: contents !important;
+  }
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+  @media (max-width: 639px) {
+    grid-area: search !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > input:nth-of-type(1) {
+  font-size: 17px !important;
+  text-align: left !important;
+  line-height: 13.3333px !important;
+  font-family: Arial !important;
+  width: 341px !important;
+  height: 41.5938px !important;
+
+  @media (max-width: 639px) {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > svg:nth-of-type(1) {
+  margin-left: -2px !important;
+  margin-right: 0px !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) {
+  @media (max-width: 639px) {
+    grid-area: bell !important;
+  }
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(1) {
+  @media (max-width: 639px) {
+    grid-area: cart !important;
+  }
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(1) > span:nth-of-type(1) {
+  text-align: center !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
+  @media (max-width: 639px) {
+    position: fixed !important;
+    left: 8px !important;
+    right: 8px !important;
+    width: auto !important;
+    top: 100px !important; /* Adjusted for extra row in background top bar */
+  }
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > h1:nth-of-type(1) {
+  font-size: 23px !important;
+  line-height: 19.6px !important;
+  font-weight: normal !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(2) {
+  font-size: 10px !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > h1:nth-of-type(1) {
+  font-size: 17px !important;
+  font-family: Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: bold !important;
+  text-align: left !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(2) > h1:nth-of-type(1) {
+  font-size: 17px !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) {
+  @media (max-width: 639px) {
+    display: none !important;
+  }
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+  margin-bottom: 13px !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button:nth-of-type(1) {
+  border-width: 0px !important;
+  background-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button:nth-of-type(1) > span:nth-of-type(1) {
+  font-family: Arial, sans-serif !important;
+  font-size: 13px !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) {
+  padding-top: 3.8px !important;
+  padding-bottom: 3.8px !important;
+  padding-right: 16.2px !important;
+  padding-left: 16.2px !important;
+  margin-bottom: 0px !important;
+  margin-right: 0px !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button > span:nth-of-type(1),
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button,
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > nav:nth-of-type(1) > button,
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > nav:nth-of-type(1) > button span,
+nav button,
+nav button span {
+  font-size: 15px !important;
+  font-family: Arial, sans-serif !important;
+  font-weight: normal !important;
+  border-radius: 18px !important;
+  padding-left: 17.2px !important;
+  padding-right: 17.2px !important;
+  margin-left: 0px !important;
+  margin-top: 4px !important;
+  margin-bottom: 0px !important;
+}
+
+/* Active navigation buttons (Primary background, white text) */
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button.bg-natural-primary,
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > nav:nth-of-type(1) > button.bg-natural-primary,
+nav button.bg-natural-primary {
+  background-color: var(--color-natural-primary, #5F6F52) !important;
+  border-color: var(--color-natural-primary, #5F6F52) !important;
+  color: #ffffff !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button.bg-natural-primary span,
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > nav:nth-of-type(1) > button.bg-natural-primary span,
+nav button.bg-natural-primary span {
+  color: #ffffff !important;
+}
+
+/* Inactive navigation buttons (Light gray background, dark text) */
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button:not(.bg-natural-primary),
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > nav:nth-of-type(1) > button:not(.bg-natural-primary),
+nav button:not(.bg-natural-primary) {
+  background-color: #eeeeee !important;
+  border-color: #eeeeee !important;
+  color: #333333 !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button:not(.bg-natural-primary) span,
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > nav:nth-of-type(1) > button:not(.bg-natural-primary) span,
+nav button:not(.bg-natural-primary) span {
+  color: #333333 !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) {
+  margin-top: 0px !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+  margin-top: 0px !important;
+}
+
+

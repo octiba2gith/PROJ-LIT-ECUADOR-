@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E8E5DA"/>
+    </radialGradient>
+    <linearGradient id="book" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5F6F52"/>
+      <stop offset="100%" stop-color="#3F4F35"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg)"/>
+  <!-- Circle accent -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#E8E5DA" stroke-width="8"/>
+  <circle cx="256" cy="256" r="160" fill="none" stroke="#5F6F52" stroke-width="2" stroke-dasharray="12 8" opacity="0.6"/>
+  <!-- Styled Book Spine / Leaves -->
+  <g transform="translate(136, 126)" fill="none" stroke="url(#book)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Beautiful styled book pages / butterfly structure -->
+    <path d="M120,40 C60,20 20,40 20,40 L20,200 C20,200 60,180 120,200 C180,180 220,200 220,200 L220,40 C220,40 180,20 120,40 Z" fill="#5F6F52" fill-opacity="0.1"/>
+    <path d="M120,40 L120,200" stroke="#A67B5B" stroke-width="14"/>
+    <path d="M20,40 C60,20 120,40 120,40 C120,40 180,20 220,40" stroke="#A67B5B" stroke-width="16"/>
+    <path d="M20,200 C60,180 120,200 120,200 C120,200 180,180 220,200" stroke="#A67B5B" stroke-width="16"/>
+  </g>
+</svg>

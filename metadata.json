@@ -1,0 +1,6 @@
+{
+  "name": "literaturaecuador",
+  "description": "Aplicación oficial para realizar pedidos de libros, solicitudes de compra por título y categoría, control de costos unitarios en dólares y gestión de stock del catálogo de Literatura Ecuador.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
