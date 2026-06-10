@@ -39,13 +39,14 @@
       };
     };
 
-    # Workspace lifecycle hooks
-    onCreate = {
-      # Install dependencies automatically when the workspace is generated
-      npm-install = "npm install";
+   # Workspace lifecycle hooks
+    workspace = {
+      onCreate = {
+        # Install dependencies automatically when the workspace is generated with backward compatibility
+        npm-install = "npm install --legacy-peer-deps";
+      };
+      onStart = {
+        # This runs every time the workspace starts
+      };
     };
-    onStart = {
-      # This runs every time the workspace starts
-    };
-  };
 }
